@@ -177,7 +177,10 @@ extension Visualizer {
                         self.log(touch)
                     })
                 }
-                
+                log(touch)
+            case .regionEntered, .regionMoved, .regionExited:
+                log(touch)
+            @unknown default:
                 log(touch)
             }
         }
@@ -212,6 +215,10 @@ extension Visualizer {
             case .stationary: phase = "S"
             case .ended: phase = "E"
             case .cancelled: phase = "C"
+            case .regionEntered: phase = "rE"
+            case .regionMoved: phase = "rM"
+            case .regionExited: phase = "rE"
+            @unknown default: phase = ""
             }
             
             let x = String(format: "%.02f", view.center.x)
