@@ -28,9 +28,9 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/morizotter/TouchVisualizer.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/morizotter'
 
-  s.platform     = :ios, '9.0'
+  s.platform     = :ios, '12.1'
   s.requires_arc = true
-  s.swift_version = '4.2'
+  s.swift_version = '5'
 
   s.source_files = 'TouchVisualizer/**/*.swift'
 end
